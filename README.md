@@ -8,7 +8,7 @@ Extension of [datapackage](https://github.com/tryggvib/datapackage) which provid
     # Create BudgetResource which has a lot of requirements
     budget = BudgetResource(
         currency='ISK',
-	dateLastUpdated='2014-04-22',
+        dateLastUpdated='2014-04-22',
         datePublished='1982-04-22',
         fiscalYear='2014',
         granularity='transactional',
