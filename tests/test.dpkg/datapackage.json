@@ -1,0 +1,62 @@
+{
+  "name": "test.dpkg",
+  "resources": [
+      {
+          "currency": "ISK",
+          "dateLastUpdated": "2014-04-22",
+          "datePublished": "1982-04-22",
+          "fiscalYear": "2014",
+          "granularity": "transactional",
+          "status": "approved",
+          "type": "expenditure",
+          "location": "IS",
+	  "standard": "1.0.0-alpha",
+          "data": {"foo": "bar"},
+          "path": "foobar.json",
+          "url": "http://foobar.com/foobar.json",
+          "name": "foobar",
+          "format": "json",
+          "mediatype": "application/json",
+          "encoding": "utf-8",
+          "bytes": 14,
+          "hash": "94232c5b8fc9272f6f73a1e36eb68fcf",
+          "schema": {
+	      "fields": [
+		  {
+		      "name": "foo"
+		  },
+		  {
+		      "name": "bar"
+		  }
+	      ]
+	  },
+          "sources": [
+              {
+		  "name": "World Bank and OECD",
+		  "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+	      }
+	  ],
+          "licenses": [
+              {
+		  "type":"CC-BY",
+		  "url": "http://creativecommons.org/licenses/by/4.0/"
+	      }
+          ]
+      }
+  ], 
+  "license": "ODC-BY",
+  "datapackage_version": "1.0-beta.10", 
+  "title": "A simple datapackage for testing", 
+  "description": "A simple, bare datapackage created for testing purposes.", 
+  "homepage": "http://localhost/", 
+  "version": "1.0.0", 
+  "sources": [
+      {
+          "name": "World Bank and OECD",
+          "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+      }
+  ],
+  "keywords": ["testing"], 
+  "image": "test.jpg"
+}
+

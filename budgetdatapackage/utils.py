@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 # budgetdatapackage - Load and manage Budget data packages
 # Copyright (C) 2013 Tryggvi Björgvinsson
 #

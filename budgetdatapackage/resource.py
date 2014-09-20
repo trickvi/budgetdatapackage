@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 # budgetdatapackage - Load and manage Budget data packages
 # Copyright (C) 2013 Tryggvi Björgvinsson
 #
@@ -13,6 +14,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+from __future__ import absolute_import
 
 from .utils import Granularities, Statuses, Types, Currencies, Countries
 import datapackage
