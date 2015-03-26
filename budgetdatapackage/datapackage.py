@@ -24,38 +24,4 @@ from .resource import BudgetResource
 
 class BudgetDataPackage(datapackage.DataPackage):
 
-    @property
-    def resources(self):
-        return self['resources']
-
-    @resources.setter
-    def resources(self, value):
-        if not value:
-            raise ValueError("resources is a required field")
-
-        # Check if array is a list
-        if type(value) != list:
-            raise TypeError(
-                '{0} must be a list not {1}'.format(
-                    BudgetResource.__name__, type(value)))
-
-        # We loop through the list and create Resource objects from dicts
-        # or throw errors if the type is invalid
-        modified_array = []
-        for single_value in value:
-            if isinstance(single_value, BudgetResource):
-                # We don't need to do anything if it already
-                # is of the correct class
-                pass
-            elif type(single_value) == dict:
-                # We turn the single_value into kwargs and pass it into
-                # the License constructor
-                base = os.path.curdir if 'base' not in self else self.base
-                single_value = BudgetResource(datapackage_uri=base,
-                                        **single_value)
-            else:
-                raise TypeError('{0} type {1} is invalid'.format(
-                    BudgetResource.__name__, type(single_value)))
-            modified_array.append(single_value)
-
-        self['resources'] = modified_array
+    RESOURCE_CLASS = BudgetResource
