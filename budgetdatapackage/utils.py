@@ -1,4 +1,9 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+from __future__ import unicode_literals
+
 # budgetdatapackage - Load and manage Budget data packages
 # Copyright (C) 2013 Tryggvi Björgvinsson
 #
@@ -15,13 +20,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import os.path
+import os
+import io
 import json
-import sys
-if sys.version_info[0] < 3:
-    next = lambda x: x.next()
-    bytes = str
-    str = unicode
+from datapackage import compat
 
 
 class Lookup(object):
@@ -31,7 +33,7 @@ class Lookup(object):
         if self.LOOKUP_FILE is None:
             raise NotImplementedError('Lookup file is missing')
 
-        with open(self.LOOKUP_FILE) as object_list:
+        with io.open(self.LOOKUP_FILE) as object_list:
             self.objects = json.load(object_list)
 
     def is_valid(self, code):

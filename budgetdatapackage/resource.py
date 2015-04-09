@@ -1,4 +1,9 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+from __future__ import unicode_literals
+
 # budgetdatapackage - Load and manage Budget data packages
 # Copyright (C) 2013 Tryggvi Björgvinsson
 #
@@ -15,40 +20,34 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import
-
 from .utils import Granularities, Statuses, Types, Currencies, Countries
 import datapackage
 import datetime
 import warnings
-import sys
-if sys.version_info[0] < 3:
-    next = lambda x: x.next()
-    bytes = str
-    str = unicode
+from datapackage import compat
 
 
 class BudgetResource(datapackage.Resource):
 
     BUDGET_DATA_PACKAGE_STANDARD = "1.0.0-alpha"
-    SPECIFICATION = {'currency': str,
-                     'dateLastUpdated': str,
-                     'datePublished': str,
-                     'fiscalYear': str,
-                     'granularity': str,
-                     'standard': str,
-                     'status': str,
-                     'type': str,
-                     'location': str,
-                     'url': str,
-                     'path': str,
+    SPECIFICATION = {'currency': compat.str,
+                     'dateLastUpdated': compat.str,
+                     'datePublished': compat.str,
+                     'fiscalYear': compat.str,
+                     'granularity': compat.str,
+                     'standard': compat.str,
+                     'status': compat.str,
+                     'type': compat.str,
+                     'location': compat.str,
+                     'url': compat.str,
+                     'path': compat.str,
                      'data': None,
-                     'name': str,
-                     'format': str,
-                     'mediatype': str,
-                     'encoding': str,
+                     'name': compat.str,
+                     'format': compat.str,
+                     'mediatype': compat.str,
+                     'encoding': compat.str,
                      'bytes': int,
-                     'hash': str,
+                     'hash': compat.str,
                      'schema': (dict, datapackage.schema.Schema),
                      'sources': list,
                      'licenses': list}
