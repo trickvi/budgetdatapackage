@@ -1,1 +1,1 @@
-git+https://github.com/tryggvib/datapackage@development#egg=datapackage
+datapackage==0.5.1
