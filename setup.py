@@ -12,7 +12,7 @@ with open('README.rst') as readme:
 
 setup(
     name = 'budgetdatapackage',
-    version = '0.0.3',
+    version = '0.0.4',
     url = 'https://github.com/tryggvib/budgetdatapackage',
     license = 'GPLv3',
     description = description,
