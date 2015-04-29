@@ -19,7 +19,7 @@ setup(
     long_description = long_description,
     maintainer = 'Tryggvi Björgvinsson',
     maintainer_email = 'tryggvi.bjorgvinsson@okfn.org',
-    install_requires = ['datapackage>=0.4.1'],
+    install_requires = ['datapackage>=0.5.2'],
     packages = ['budgetdatapackage'],
     package_dir={'budgetdatapackage': 'budgetdatapackage'},
     package_data={'budgetdatapackage': ['data/*.json']},
